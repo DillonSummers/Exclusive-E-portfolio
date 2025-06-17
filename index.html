@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dillon Summers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <section id="site-content">
+
+        <div class="mail__fixed">
+  <a href="#" aria-label="Mail" class="mail__btn click" id="mail-icon">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+  <div id="contact-modal" class="modal hidden">
+  <div class="modal__overlay"></div>
+  <div class="modal__content two-col">
+    <!-- LEFT COLUMN: Description + Icons -->
+    <div class="modal__panel modal__panel--left">
+      <button class="modal__close">&times;</button>
+      <h2>Here's a bit about me.</h2>
+      <p><strong>Frontend Software Engineer.</strong></p>
+      <p>
+        I'm a 21-year-old American <b>frontend software engineer</b> 
+        with a strong passion for developing websites with great <b>user experiences</b>. 
+        I currently work on extremely difficult engineering problems and learn from 
+        a team of some of the most <b>talented</b> and <b>experienced</b> software engineers every day.
+      </p>
+      <div class="language-list">
+          <!-- 2x4 Grid of Icons -->
+          <div class="language"><figure class="language__img--wrapper"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="HTML5" class="language__img"><figcaption class="language-label">HTML5</figcaption></figure></div>
+          <div class="language"><figure class="language__img--wrapper"><img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS3" class="language__img"><figcaption class="language-label">CSS3</figcaption></figure></div>
+          <div class="language"><figure class="language__img--wrapper"><img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="JavaScript" class="language__img"><figcaption class="language-label">JavaScript</figcaption></figure></div>
+          <div class="language"><figure class="language__img--wrapper"><img src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png" alt="TypeScript" class="language__img"><figcaption class="language-label">TypeScript</figcaption></figure></div>
+          <div class="language"><figure class="language__img--wrapper"><img src="https://cdn.iconscout.com/icon/free/png-256/vue-282497.png" alt="Vue.js" class="language__img"><figcaption class="language-label">Vue.js</figcaption></figure></div>
+          <div class="language"><figure class="language__img--wrapper"><img src="https://cdn.iconscout.com/icon/free/png-256/nuxt-dot-js-3628959-3030184.png" alt="Nuxt.js" class="language__img"><figcaption class="language-label">Nuxt.js</figcaption></figure></div>
+          <div class="language"><figure class="language__img--wrapper"><img src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="React" class="language__img"><figcaption class="language-label">React</figcaption></figure></div>
+          <div class="language"><figure class="language__img--wrapper"><img src="https://mobx.js.org/img/mobx.png" alt="MobX" class="language__img"><figcaption class="language-label">MobX</figcaption></figure></div>
+        </div>
+      </div>
+
+    <!-- RIGHT COLUMN: Contact Form -->
+    <div class="modal__panel modal__panel--right">
+      <h2>Let’s have a chat!</h2>
+      <p>I’m currently open to new opportunities.</p>
+      <form class="contact-form">
+        <form action="https://formspree.io/f/xblyyvae" method="POST">
+  <label>* Name</label>
+  <input type="text" name="name" required />
+
+  <label>* E-mail</label>
+  <input type="email" name="email" required />
+
+  <label>* Message</label>
+  <textarea name="message" rows="4" required></textarea>
+
+  <button type="submit" class="modal__submit">Send it my way</button>
+  <input type="hidden" name="_subject" value="New Contact Form Submission">
+</form>
+
+<!-- Success message container -->
+ <button class="modal__close success-close">&times;</button>
+<div id="form-success-overlay" class="modal__panel--success hidden">
+    <p>Thanks for the message! Looking forward to speaking with you soon.</p>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+<nav>
+        <figure>
+          <h1 style="font-size: 64px;">DS</h1>
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link"><a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a></li>
+          <li class="nav__link"><a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a></li>
+          <li class="nav__link"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank" rel="noopener noreferrer" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a></li>
+          <li class="nav__link"><a href="#" class="nav__link--anchor"><i class="fas fa-adjust"></i></a></li>
+        </ul>
+      </nav>
+
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">Hey</h1>
+          <h1 class="title title--secondary"><b>I'm Dillon</b>.</h1>
+          <p class="header__para">
+            I'm a <b class="orange">Frontend Software Engineer</b> with a strong passion for experiences.
+            <br />
+            Here's a bit more <b>about me</b>.
+          </p>
+          <div class="about-me__links">
+            <a href="https://www.linkedin.com/feed/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/DillonSummers?tab=repositories" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="file:///C:/Users/dmsum/Downloads/Copy%20of%20Copy%20of%20Dillon%20Summers%20Resume%202024%20(4).pdf" target="_blank" aria-label="Resume"><i class="fas fa-file-pdf"></i></a>
+          </div>
+        </div>
+      </header>
+
+      <div class="scroll no-invert">
+        <div class="scroll__icon"></div>
+      </div>
+    </section>
+
+    <section>
+  <div class="container">
+    <div class="row">
+      <h1 class="section_title">
+        Here are some of my <b>projects</b>
+      </h1>
+      <ul class="project__list">
+        <!-- Project 1: ChatGPT UI Showcase -->
+        <li class="project">
+          <div class="project__wrapper">
+            <img class="project__img no-invert" src="./assets/ChatGPT%20Image%20Jun%209,%202025,%2001_51_27%20PM.png" alt="ChatGPT Project Preview">
+            <div class="project__description">
+              <h3 class="project__description--title">LSU Information Scavenger Hunt App</h3>
+              <h4 class="project__description--sub-title">HTML, CSS, JavaScript</h4>
+              <p class="project__description--para">
+                A sleek LSU-inspired flutter application, highlighting prompt handling and user interaction design. Demonstrates modern layout techniques and responsive styling.
+              </p>
+              <div class="project__description--links">
+                <a href="https://github.com/DillonSummers/flutter_application_33" target="_blank" class="project__description--link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://github.com/DillonSummers/flutter_application_33" target="_blank" class="project__description--link">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Project 2: DGA AI Button -->
+        <li class="project">
+          <div class="project__wrapper">
+            <img class="project__img no-invert" src="./assets/Screenshot%202025-06-09%20135516.png" alt="DGA AI Button Preview">
+            <div class="project__description">
+              <h3 class="project__description--title">DGA AI Button</h3>
+              <h4 class="project__description--sub-title">HTML, CSS, JavaScript</h4>
+              <p class="project__description--para">
+                A minimal AI-powered assistant interface designed for simplicity and responsiveness. This app simulates a prompt/response system across all devices.
+              </p>
+              <div class="project__description--links">
+                <a href="https://github.com/DillonSummers/AI-Button/blob/main/AIbutton.html" target="_blank" class="project__description--link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="file:///C:/Users/dmsum/AIbutton.html" target="_blank" class="project__description--link">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Project 3: Frontend Simplified -->
+        <li class="project">
+          <div class="project__wrapper">
+            <img class="project__img no-invert" src="./assets/Screenshot%202025-06-12%20121707.png" alt="Frontend Simplified Preview">
+            <div class="project__description">
+              <h3 class="project__description--title">Frontend Simplified</h3>
+              <h4 class="project__description--sub-title">HTML, CSS, JavaScript</h4>
+              <p class="project__description--para">
+                A clean and responsive landing page designed to help beginners master frontend development. Built with simplicity and learning clarity in mind.
+              </p>
+              <div class="project__description--links">
+                <a href="https://github.com/DillonSummers/HTML-Crash-Course-2" target="_blank" class="project__description--link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="http://127.0.0.1:5501/index.html" target="_blank" class="project__description--link">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Project 4: Library E-Commerce Website -->
+        <li class="project">
+          <div class="project__wrapper">
+            <img class="project__img no-invert" src="./assets/Screenshot%202025-06-09%20135405.png" alt="Library E-Commerce Website Preview">
+            <div class="project__description">
+              <h3 class="project__description--title">Library E-Commerce Website</h3>
+              <h4 class="project__description--sub-title">HTML, CSS, JavaScript</h4>
+              <p class="project__description--para">
+                A polished, responsive website for a modern online library platform. Built with clean HTML and CSS, this project focuses on strong UI structure and accessible layout.
+              </p>
+              <div class="project__description--links">
+                <a href="https://github.com/DillonSummers/E-Commerce-Website" target="_blank" class="project__description--link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="file:///C:/Users/dmsum/OneDrive/Desktop/E-Commerce/index.html" target="_blank" class="project__description--link">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Project 5: E-Portfolio Website -->
+        <li class="project">
+          <div class="project__wrapper">
+            <img class="project__img no-invert" src="./assets/Screenshot%202025-06-09%20135439.png" alt="Dillon Summers Portfolio Preview">
+            <div class="project__description">
+              <h3 class="project__description--title">E-Portfolio Website</h3>
+              <h4 class="project__description--sub-title">HTML, CSS, JavaScript</h4>
+              <p class="project__description--para">
+                A personalized developer portfolio showcasing projects, skills, and technologies. Fully responsive and styled for clarity and engagement.
+              </p>
+              <div class="project__description--links">
+                <a href="https://github.com/DillonSummers/E-Portfolio" target="_blank" class="project__description--link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="file:///C:/Users/dmsum/OneDrive/Desktop/E-Portfolio/index.html" target="_blank" class="project__description--link">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Project 6: Treact Landing Page -->
+        <li class="project">
+          <div class="project__wrapper">
+            <img class="project__img no-invert" src="./assets/ChatGPT%20Image%20Jun%209,%202025,%2001_51_04%20PM.png" alt="Treact Landing Page Preview">
+            <div class="project__description">
+              <h3 class="project__description--title">Treact Landing Page</h3>
+              <h4 class="project__description--sub-title">HTML, Tailwind CSS, React</h4>
+              <p class="project__description--para">
+                A modern, responsive landing page clone built with React and Tailwind CSS, inspired by the Treact template. Highlights sectioned layouts, component reuse, and professional styling.
+              </p>
+              <div class="project__description--links">
+                <a href="https://github.com/DillonSummers/Treact" target="_blank" class="project__description--link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="file:///C:/Users/dmsum/OneDrive/Desktop/Treact/index.html#" target="_blank" class="project__description--link">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section> <!-- ✅ END SITE CONTENT -->
+
+
+  <!-- ✅ JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // === Invert Mode Toggle ===
+  const toggle = document.querySelector(".nav__link--anchor .fa-adjust");
+  const body = document.body;
+  const siteContent = document.getElementById("site-content"); // Wrapper for your entire page
+
+// Set default based on system preference
+if (!body.hasAttribute("data-theme")) {
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  body.setAttribute("data-theme", prefersDark ? "dark" : "light");
+}
+
+toggle?.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Toggle visual invert on full site content
+  siteContent?.classList.toggle("invert-mode");
+
+  // Toggle data-theme attribute (controls text colors, etc.)
+  const currentTheme = body.getAttribute("data-theme");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  body.setAttribute("data-theme", newTheme);
+});
+
+  // === Modal Elements
+  const modal = document.getElementById("contact-modal");
+  const modalContent = modal?.querySelector(".modal__content");
+  const mailIcon = document.getElementById("mail-icon");
+  const closeBtn = document.querySelector(".modal__close");
+  const overlay = document.querySelector(".modal__overlay");
+  const form = document.querySelector(".contact-form");
+  const successMessage = document.getElementById("form-success-overlay");
+
+  // === Modal Open (with animation)
+  mailIcon?.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.classList.remove("hidden");
+  document.body.classList.add("modal-open");
+
+  // Fix: remove exit animation if still present
+  modalContent?.classList.remove("animate-out");
+  modalContent?.classList.add("animate-in");
+});
+
+  // === Modal Close + Reset
+  closeBtn?.addEventListener("click", () => {
+  modal.classList.add("hidden");
+  document.body.classList.remove("modal-open");
+
+  // Reset form
+  form?.classList.remove("hidden");
+  successMessage?.classList.add("hidden");
+  form?.reset();
+
+  // Reset animation classes
+  modalContent?.classList.remove("animate-in");
+  modalContent?.classList.add("animate-out");
+});
+
+  // === Optional: Overlay Click to Close Modal
+  overlay?.addEventListener("click", (e) => {
+    // if (e.target === overlay && modal && modalContent) {
+    //   modal.classList.add("hidden");
+    //   document.body.classList.remove("modal-open");
+    //   form?.classList.remove("hidden");
+    //   successMessage?.classList.add("hidden");
+    //   form?.reset();
+    //   modalContent?.classList.remove("animate-in");
+    //   modalContent?.classList.add("animate-out");
+    // }
+  });
+
+  // === Mouse Avoid Animation
+  const squiggly = document.getElementById("squiggly");
+  const triangle = document.getElementById("triangle");
+
+  function getDistance(x1, y1, x2, y2) {
+    return Math.hypot(x2 - x1, y2 - y1);
+  }
+
+  function moveSVGs(event) {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    [squiggly, triangle].forEach((svg) => {
+      if (!svg) return;
+      const rect = svg.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const dist = getDistance(mouseX, mouseY, centerX, centerY);
+
+      svg.style.transform = dist < 150
+        ? `translate(${mouseX - centerX > 0 ? -100 : 100}px, ${mouseY - centerY > 0 ? -100 : 100}px)`
+        : 'translate(0, 0)';
+    });
+  }
+
+  document.addEventListener("mousemove", moveSVGs);
+
+  // === Formspree Submission Logic
+  form?.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" }
+    })
+    .then(() => {
+      form.classList.add("hidden");
+      successMessage?.classList.remove("hidden");
+      successMessage?.classList.add("show");    })
+    .catch(() => {
+      alert("There was an error. Please try again.");
+    });
+  });
+  const successCloseBtn = document.querySelector(".modal__close.success-close");
+
+successCloseBtn?.addEventListener("click", () => {
+  modal.classList.add("hidden");
+  document.body.classList.remove("modal-open");
+  successMessage?.classList.add("hidden");
+  form?.classList.remove("hidden");
+  form?.reset();
+});
+});
+</script>
+
+<img src="./assets/semi circle.svg" class="shape shape--0">
+<img src="./assets/circle.svg" class="shape shape--1">
+<img src="./assets/squiggly.svg" class="shape shape--2">
+<img src="./assets/circle.svg" class="shape shape--3">
+<img src="./assets/triangle.svg" class="shape shape--4">
+<img src="./assets/circle.svg" class="shape shape--5">
+<img src="./assets/squiggly.svg" class="shape shape--6">
+<img src="./assets/circle.svg" class="shape shape--7">
+<img src="./assets/semi circle.svg" class="shape shape--8">
+
+<section id="ds">
+                    <div class="container">
+                      <div class="row">
+                        <h1 class="section_title">DS</h1>
+                  
+                        <div class="social-links">
+                          <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span class="link-label">GitHub</span>
+                          </a>
+                          <a href="https://www.linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            <span class="link-label">LinkedIn</span>
+                          </a>
+                          <a href="https://outlook.office.com/mail/inbox/id/AAQkADY3YjA5MTA3LWI4NGEtNGRjOS04OGI4LTA4YjM1NDNmNzhhNAAQAK3ZCfbzNC1CotzcxHQYu4I%3D" target="_blank" class="social-link" aria-label="Twitter">
+                            <i class="fa-solid fa-inbox"></i>
+                            <span class="link-label">Email</span>
+                          </a>
+                          <a href="file:///C:/Users/dmsum/Downloads/Copy%20of%20Copy%20of%20Dillon%20Summers%20Resume%202024%20(4).pdf" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="link-label">Resume</span>
+                          </a>
+                        </div>
+                  
+                        <div class="ds-footer">
+                          <p>Thank you for visiting my portfolio. Let's connect!</p>
+                          <p>© 2025 Dillon Summers</p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+</body>
+</html>
+
+
