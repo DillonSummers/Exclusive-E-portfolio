@@ -45,30 +45,28 @@
       </div>
 
     <!-- RIGHT COLUMN: Contact Form -->
-    <div class="modal__panel modal__panel--right">
-      <h2>Let’s have a chat!</h2>
-      <p>I’m currently open to new opportunities.</p>
-      <form class="contact-form">
-        <form action="https://formspree.io/f/xblyyvae" method="POST">
-  <label>* Name</label>
-  <input type="text" name="name" required />
+<div class="modal__panel modal__panel--right">
+  <h2>Let’s have a chat!</h2>
+  <p>I’m currently open to new opportunities.</p>
 
-  <label>* E-mail</label>
-  <input type="email" name="email" required />
+  <!-- Contact Form -->
+  <form class="contact-form" action="https://formspree.io/f/xblyyvae" method="POST">
+    <label>* Name</label>
+    <input type="text" name="name" required />
+    <label>* E-mail</label>
+    <input type="email" name="email" required />
+    <label>* Message</label>
+    <textarea name="message" rows="4" required></textarea>
+    <button type="submit" class="modal__submit">Send it my way</button>
+    <input type="hidden" name="_subject" value="New Contact Form Submission">
+  </form>
 
-  <label>* Message</label>
-  <textarea name="message" rows="4" required></textarea>
-
-  <button type="submit" class="modal__submit">Send it my way</button>
-  <input type="hidden" name="_subject" value="New Contact Form Submission">
-
-  <!-- Success message container -->
- <button class="modal__close success-close">&times;</button>
-<div id="form-success-overlay" class="modal__panel--success hidden">
+  <!-- ✅ Success Screen -->
+  <div id="form-success-overlay" class="modal__panel--success hidden">
+    <button class="modal__close success-close" aria-label="Close success message">&times;</button>
     <p>Thanks for the message! Looking forward to speaking with you soon.</p>
   </div>
 </div>
-</form>
 
 
     </div>
@@ -85,7 +83,7 @@
           <li class="nav__link" onclick="toggleModal()"><a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a></li>
           <li class="nav__link" onclick="toggleModal()"><a href="#projects" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a></li>
           <li class="nav__link"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank" rel="noopener noreferrer" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a></li>
-          <li class="nav__link" onclick="toggleCOntrast()"><a href="#" class="nav__link--anchor"><i class="fas fa-adjust"></i></a></li>
+          <li class="nav__link" onclick="toggleContrast()"><a href="#" class="nav__link--anchor"><i class="fas fa-adjust"></i></a></li>
         </ul>
       </nav>
 
