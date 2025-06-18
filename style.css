@@ -244,6 +244,8 @@ body.modal-open {
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 10; /* above background shapes */
 }
 
 .modal__panel--success {
@@ -975,55 +977,97 @@ nav {
   width = 80vw
   */
 
-  .shape {
+  .shapes-container {
   position: fixed;
-  transition: transform 0.2s ease;
-  pointer-events: none; /* Makes sure shapes don’t block clicks */
-  z-index: -1; /* Optional: keep behind all content */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;   /* Behind everything */
+  overflow: hidden;
 }
 
+.shape {
+  position: absolute;
+  width: 20px;    /* Smaller shapes */
+  height: auto;
+  transition: transform 0.2s ease;
+  pointer-events: none;
+  z-index: 1;
+}
 
-  .shape--0 {
-    height: 35vh;
-    left: 5vw;
+  /* === Row 1 === */
+.shape--0 { top: 15vh; left: 5vw; }
+.shape--1 { top: 15vh; left: 50vw; }
+.shape--2 { top: 15vh; left: 90vw; }
+
+/* === Row 2 === */
+.shape--3 { top: 50vh; left: 5vw; }
+.shape--4 { top: 50vh; left: 50vw; }
+.shape--5 { top: 50vh; left: 90vw; }
+
+/* === Row 3 === */
+.shape--6 { top: 85vh; left: 5vw; }
+.shape--7 { top: 85vh; left: 50vw; }
+.shape--8 { top: 85vh; left: 90vw; }
+
+
+/* Small phones, tablets, large smart phones */
+@media (max-width: 768px) {
+  .title {
+    font-size: 80px;
   }
 
-  .shape--1 {
-    height: 35vh;
-    left: 50vw;
+  .header__para {
+    font-size: 20px;
   }
 
-  .shape--2 {
-    height: 35vh;
-    left: 80vw;
+  .modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0;
   }
 
-  .shape--3 {
-    height: 70vh;
-    left: 5vw;
+  .modal__half {
+    width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .title {
+    font-size: 52px;
   }
 
-  .shape--4 {
-    height: 70vh;
-    left: 50vw;
+  .header__para {
+    font-size: 18px;
   }
 
-  .shape--5 {
-    height: 70vh;
-    left: 80vw;
+  .nav__link:first-child {
+    display: none;
   }
 
-  .shape--6 {
-    height: 95vh;
-    left: 5vw;
+  .project__description--para {
+    display: none;
   }
 
-  .shape--7 {
-    height: 95vh;
-    left: 50vw;
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
   }
 
-  .shape--8  {
-    height: 95vh;
-    left: 80vw; 
+  .project__description--sub-title {
+    margin-bottom: 8px;
   }
+
+  .modal__half {
+    padding: 40px;
+  }
+}

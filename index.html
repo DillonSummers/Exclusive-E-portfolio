@@ -61,14 +61,16 @@
 
   <button type="submit" class="modal__submit">Send it my way</button>
   <input type="hidden" name="_subject" value="New Contact Form Submission">
-</form>
 
-<!-- Success message container -->
+  <!-- Success message container -->
  <button class="modal__close success-close">&times;</button>
 <div id="form-success-overlay" class="modal__panel--success hidden">
     <p>Thanks for the message! Looking forward to speaking with you soon.</p>
   </div>
 </div>
+</form>
+
+
     </div>
   </div>
 </div>
@@ -80,10 +82,10 @@
           <h1 style="font-size: 64px;">DS</h1>
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link"><a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a></li>
-          <li class="nav__link"><a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a></li>
+          <li class="nav__link" onclick="toggleModal()"><a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a></li>
+          <li class="nav__link" onclick="toggleModal()"><a href="#projects" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a></li>
           <li class="nav__link"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank" rel="noopener noreferrer" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a></li>
-          <li class="nav__link"><a href="#" class="nav__link--anchor"><i class="fas fa-adjust"></i></a></li>
+          <li class="nav__link" onclick="toggleModal()"><a href="#" class="nav__link--anchor"><i class="fas fa-adjust"></i></a></li>
         </ul>
       </nav>
 
@@ -382,17 +384,39 @@ successCloseBtn?.addEventListener("click", () => {
   form?.reset();
 });
 });
+
+
+const scaleFactor = 1 / 20;
+let isModalOpen = false;
+let contrastToggle = false;
+
+document.addEventListener("mousemove", moveBackground);
+
+function moveBackground(event) {
+  const shapes = document.querySelectorAll(".shape");
+  const x = event.clientX / window.innerWidth - 0.5;
+  const y = event.clientY / window.innerHeight - 0.5;
+ 
+  shapes.forEach((shape, i) => {
+    const direction = i % 2 === 0 ? 1 : -1;
+    const offsetX = x * 30 * direction;
+    const offsetY = y * 30 * direction;
+    shape.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+  });
+}
 </script>
 
-<img src="./assets/semi circle.svg" class="shape shape--0">
-<img src="./assets/circle.svg" class="shape shape--1">
-<img src="./assets/squiggly.svg" class="shape shape--2">
-<img src="./assets/circle.svg" class="shape shape--3">
-<img src="./assets/triangle.svg" class="shape shape--4">
-<img src="./assets/circle.svg" class="shape shape--5">
-<img src="./assets/squiggly.svg" class="shape shape--6">
-<img src="./assets/circle.svg" class="shape shape--7">
-<img src="./assets/semi circle.svg" class="shape shape--8">
+<div class="shapes-container" aria-hidden="true">
+  <img src="./assets/semi circle.svg" class="shape shape--0">
+  <img src="./assets/circle.svg" class="shape shape--1">
+  <img src="./assets/squiggly.svg" class="shape shape--2">
+  <img src="./assets/circle.svg" class="shape shape--3">
+  <img src="./assets/triangle.svg" class="shape shape--4">
+  <img src="./assets/circle.svg" class="shape shape--5">
+  <img src="./assets/squiggly.svg" class="shape shape--6">
+  <img src="./assets/circle.svg" class="shape shape--7">
+  <img src="./assets/semi circle.svg" class="shape shape--8">
+</div>
 
 <section id="ds">
                     <div class="container">
