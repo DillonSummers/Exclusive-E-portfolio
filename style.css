@@ -21,8 +21,19 @@ li {
   line-height: 1.2;    /* optional: controls spacing */
 }
 
+/* Cancel out inversion for the content (form) */
 .invert-mode .modal__content {
   filter: invert(100%) hue-rotate(180deg);
+}
+
+/* Invert full modal background */
+.invert-mode .modal {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+.modal,
+.modal__content {
+  transition: filter 0.4s ease;
 }
 
 .invert-mode .no-invert {
@@ -233,6 +244,66 @@ body.modal-open {
 
 .modal__overlay.show {
   display: flex !important;
+}
+
+.modal__content {
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal__content {
+  max-height: 90vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.modal__content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal__content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal__content::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .modal__content.two-col {
+    flex-direction: column;
+  }
+
+  .modal__panel {
+    width: 100%;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal__content {
+    max-height: 90vh;
+    overflow-y: auto;
+    padding-bottom: 16px; /* extra padding for scroll */
+  }
+
+  .modal__panel {
+    padding: 16px;
+  }
+
+  .modal__panel h2 {
+    font-size: 1.3rem;
+  }
+
+  .modal__panel p,
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
 }
 
 .modal__content {
